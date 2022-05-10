@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container vw-100 vh-100">
+      <CreateCadastro/>
+      <CreateShellScripts/>
+      <GetConnection/>
+      <HiveDdl/>
+      <GetTables/>
+      
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+//import { ref } from 'vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+//import CreateCadastro from "./view/CreateCadastro.vue"
+//import CreateShellScripts from "./view/CreateShellScripts.vue"
+import GetConnection from './view/GetConnection.vue'
+//import GetTables from './view/GetTables.vue'
+//import HiveDdl from './view/HiveDdl.vue'
+
+
+
+
 </script>
 
+
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
