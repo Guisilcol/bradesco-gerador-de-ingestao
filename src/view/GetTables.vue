@@ -1,28 +1,33 @@
 <template>
   <div class="container">
-    <p class="h1 mt-3">Selecione as tabelas para a ingestão</p>
-    <div class="row h-100 mt-5">
-      <div class="row justify-content-end">
+    <p class="h7 mt-3">Selecione as tabelas para a ingestão</p>
+
+    <div class="row g-3" >
+      <div class="col-md-6 ">
+        <div class="input-group">
+           <span class="input-group-text" id="basic-addon1">Tabela</span>
+           <input v-model="searchInput" type="text" class="form-control" />
+        </div>
+      </div>
+
+      <div class="col-md-6" >
         <button
           class="col-2 btn btn-primary"
           :disabled="selectedTableList.length == 0"
         >
           Continuar
         </button>
+
       </div>
+    </div>
+
       <div class="container col-12 mt-3">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Procurar...</span>
-          </div>
-          <input v-model="searchInput" type="text" class="form-control" />
-        </div>
         <table class="table col-12">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nome da tabela</th>
-              <th scope="col"></th>
+              <th scope="col">Num.</th>
+              <th scope="col">Tabela</th>
+              <th scope="col">Marcada</th>
             </tr>
           </thead>
           <tbody>
@@ -40,7 +45,6 @@
         role="status"
       ></div>
     </div>
-  </div>
 </template>
 
 
